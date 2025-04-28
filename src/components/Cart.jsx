@@ -7,17 +7,19 @@ import { FaCodeCompare } from 'react-icons/fa6'
 
 const Cart = () => {
   return (
-    <div className='w-[370px] relative group'>
+    <div className='w-[370px] relative group '>
        <div className='w-full h-[370px]'>
         <Image className='w-full ' src={product1}/>
        </div>
+    
+        <div className='w-full bg-white absolute -bottom-[110px] left-0 group-hover:bottom-[90px] duration-500 opacity-0 group-hover:opacity-100 '>
 
-        <div className='w-full bg-white absolute -bottom-[110px] left-0 group-hover:bottom-[90px] duration-500 opacity-0 group-hover:opacity-100'>
-            <ul className='flex flex-col items-end py-6 px-8 gap-y-4 cursor-pointer'>
-                <li className='text-base text-primary font-dm font-normal'>Add to Wish List<FaHeart className='inline text=sm ml-4'/></li>
-                <li className='text-base text-primary font-dm font-normal'>Compare<FaCodeCompare className='inline text=sm ml-4'/></li>
-                <li className='text-base text-secondary font-dm font-bold'>Add to Cart<FaShoppingCart className='inline text=sm ml-4'/></li>
+            <ul className='flex flex-col items-end py-6 px-8 gap-y-4 cursor-pointer '>
+                <li className='text-base text-primary font-dm font-normal hover:text-secondary hover:font-bold duration-400'>Add to Wish List<FaHeart className='inline text=sm ml-4'/></li>
+                <li className='text-base text-primary font-dm font-normal hover:text-secondary hover:font-bold duration-400'>Compare<FaCodeCompare className='inline text=sm ml-4'/></li>
+                <li className='text-base text-primary font-dm font-normal hover:text-secondary hover:font-bold duration-400'>Add to Cart<FaShoppingCart className='inline text=sm ml-4'/></li>
             </ul>
+            
         </div>
 
         <Flex className='justify-between items-center'>
