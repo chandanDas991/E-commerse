@@ -1,15 +1,15 @@
 import React from 'react'
 import Image from '../components/Image'
 import Flex from '../components/Flex'
-import product1 from '../assets/product1.png'
+
 import { FaHeart, FaShoppingCart } from 'react-icons/fa'
 import { FaCodeCompare } from 'react-icons/fa6'
 
-const Cart = () => {
+const Cart = ({price,src,title}) => {
   return (
     <div className='w-[370px] relative group '>
        <div className='w-full h-[370px]'>
-        <Image className='w-full ' src={product1}/>
+        <Image className='w-full ' src={src}/>
        </div>
     
         <div className='w-full bg-white absolute -bottom-[110px] left-0 group-hover:bottom-[90px] duration-500 opacity-0 group-hover:opacity-100 '>
@@ -23,8 +23,8 @@ const Cart = () => {
         </div>
 
         <Flex className='justify-between items-center'>
-         <h4 className='text-xl text-secondary font-dm font-bold pt-6'>Basic Crew Neck Tee</h4>
-         <p className='text-base text-primary font-dm font-normal'>$44.00</p>
+         <h4 className='text-xl text-secondary font-dm font-bold pt-6'>{title}</h4>
+         <p className='text-base text-primary font-dm font-normal'>{price}</p>
         </Flex>
         <p className='text-base text-primary font-dm font-normal pt-[15px]'>Black</p>
 
