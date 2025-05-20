@@ -20,22 +20,54 @@ import product12 from '../assets/product12.png'
 import Image from '../components/Image'
 import Ads_4 from '../assets/Ads_4.png'
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import NextArrow from '../components/NextArrow'
+import PrevArrow from '../components/PrevArrow'
+
+
+
 
 
 
 
 const Home = () => {
+   var settings = {
+   arrows:true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow:<NextArrow/>,
+    prevArrow:<PrevArrow/>
+    
+  };
+
   return (
     <>
       <Banner/>
       <Add/>
       <Container>
       <SubHeading className="pb-10" text='New Arrivals'/>
-        <Flex className='justify-between'>
+
+         <Slider {...settings}>
+      <div>
         <Cart src={product1} price='20$' title="Basic Crew Neck Tee"/>
+      </div>
+      <div>
         <Cart src={product2} price='50$' title="Basic Crew Neck Tee"/>
-        <Cart src={product3} price='40$' title="Basic Crew Neck Tee"/>
-        <Cart src={product4} price='30$' title="Basic Crew Neck Tee"/>
+      </div>
+      <div>
+         <Cart src={product3} price='40$' title="Basic Crew Neck Tee"/>
+      </div>
+      <div>
+       <Cart src={product4} price='30$' title="Basic Crew Neck Tee"/>
+      </div>
+      
+    </Slider>
+
+        <Flex className='justify-between'>
+    
         </Flex>
       </Container>
 
