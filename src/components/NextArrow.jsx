@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
+import { HiChevronDoubleLeft } from 'react-icons/hi'
 
 const NextArrow = ({className, style, onClick}) => {
   return (
@@ -9,6 +10,7 @@ const NextArrow = ({className, style, onClick}) => {
       onClick={onClick}
     >
         <FaLongArrowAltRight className='text-white'/>
+       
 
     </div>
   )

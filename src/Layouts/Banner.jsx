@@ -14,15 +14,25 @@ import Banner4 from '../assets/Banner4.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
+
 const Banner = () => {
-var settings = {
-   arrows:true,
+   const settings = {
+    dots: true,
+    arrows:false,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-   
-    
+    appendDots: dots => (
+      <div>
+        <ul> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div>
+        0{i + 1}
+      </div>
+    )
   };
 
   return (
