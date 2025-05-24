@@ -4,6 +4,7 @@ import SubHeading from '../components/SubHeading'
 import Flex from '../components/Flex'
 import { CgChevronRight } from 'react-icons/cg'
 import Input from '../components/Input'
+import Button from '../components/Button'
 
 const Checkout = () => {
   return (
@@ -58,12 +59,19 @@ const Checkout = () => {
 
     <div className='w-[1053px] mt-15 items-center border border-[#F0F0F0]'>
       <Flex className=''>
-        <input className='accent-second text-base text-secondary font-bold font-normal leading-6' type="radio" name="" id="bank" />
+        <input className='accent-secondary text-base text-secondary font-bold font-normal leading-6' type="radio" name="" id="bank" />
         <label className='text-base text-secondary font-bold font-dm leading-6' htmlFor="bank">Bank</label>
       </Flex>
       <div className='mx-9 mt-4 py-4 px-5 bg-[#F5F5F3]'><p className='text-primary'>Pay via Bank; you can pay with your credit card if you don’t have a Bank account.</p></div>
-    </div>
+    
 
+    <Flex className='gap-x-3 pt-6 pl-9'>
+      <input className='accent-secondary text-base text-secondary font-dm font-bold leading-6 ' type="radio" name="" id='bank1'/>
+      <label className='text-base text-primary font-bold font-dm leading-6' htmlFor="bank1">Bank 2</label>
+    </Flex>
+    <p className='w-[985px] text-base text-primary font-normal font-dm leading-8 pt-4 pb-6 pl-9'>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our<a className='text-secondary' href=""> privacy policy.</a></p>
+    <div className='pl-9 pb-8'><Button text='Proceed to Bank'/></div>
+    </div>
       </Container>
     </section>
   )
