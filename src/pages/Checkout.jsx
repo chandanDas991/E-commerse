@@ -58,7 +58,7 @@ const Checkout = () => {
       </table>
 
     <div className='w-[1053px] mt-15 items-center border border-[#F0F0F0]'>
-      <Flex className=''>
+      <Flex className='gap-x-3 pt-6 pl-9'>
         <input className='accent-secondary text-base text-secondary font-bold font-normal leading-6' type="radio" name="" id="bank" />
         <label className='text-base text-secondary font-bold font-dm leading-6' htmlFor="bank">Bank</label>
       </Flex>
