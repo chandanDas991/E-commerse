@@ -6,12 +6,22 @@ import Chandan1 from '../assets/product13.png'
 import Flex from '../components/Flex'
 import Button from '../components/Button'
 import AboutCart from '../components/AboutCart'
+import SubHeading from '../components/SubHeading'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const About = () => {
+  let data=useSelector((state)=>state.active.prvevalue)
+  let data2=useSelector((state)=>state.active.daybefore)
+  
   return (
-    <section className='py-[140px]'>
+    <section className='py-[124px]'>
       <Container>
-       <Flex className='justify-between pb-[128px]'>
+      <SubHeading text="About"/>
+      <p> <Link to={data2=="Home"?"/":`/${data}`}>{data}</Link> > about</p>
+     
+
+       <Flex className='justify-between pb-[128px] pt-[136px]'>
        <div className='w-[49%] relative'>
        <Image className='w-full' src={Chandan} />
        <Button className='absolute bottom-8 left-1/2 -translate-x-1/2' text='Our Brands'/>

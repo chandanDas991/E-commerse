@@ -1,12 +1,21 @@
 import React from 'react'
 import Container from '../components/Container'
 import Button from '../components/Button'
+import SubHeading from '../components/SubHeading'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
+ let data=useSelector((state)=>state.active.prvevalue)
+ let data2=useSelector((state)=>state.active.daybefore)
+
   return (
     <section className='py-[140px]'>
       <Container>
-        <h2 className='pb-10 text-secondary text-[39px] font-dm font-bold'>Fill up a Form</h2>
+        <SubHeading text="Contact"/>
+      <p> <Link to={data2=="Home"?"/":`/${data}`}>{data}</Link> > contact</p>
+
+        <h2 className='pb-10 text-secondary text-[39px] font-dm font-bold pt-[136px]'>Fill up a Form</h2>
 
         <label className='text-base text-secondary font-dm font-bold' htmlFor="name">Name <br />
           <input className='py-4 mb-6 border-b border-[#F0F0F0] w-1/2 placeholder:text-primary text-black' id='name' type="text" placeholder='your name here'/>
